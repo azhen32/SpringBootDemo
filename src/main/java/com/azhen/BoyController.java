@@ -13,7 +13,8 @@ import java.util.List;
 public class BoyController {
     @Autowired
     private BoyRepository boyRepository;
-
+    @Autowired
+    private BoyService boyService;
     /**
      * 查询所有男生
      * @return
@@ -56,5 +57,10 @@ public class BoyController {
     @DeleteMapping("/girls/{id}")
     public void delete(@PathVariable("id") Integer id) {
         boyRepository.delete(id);
+    }
+
+    @PostMapping("/boys/two")
+    public void boyTwo() {
+        boyService.insertTwo();
     }
 }
