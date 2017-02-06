@@ -21,7 +21,7 @@ public class BoyController {
     @GetMapping(value="/boys")
     public List<Boy> lis() {
         List<Boy> list =  boyRepository.findAll();
-        return list;
+        return list ;
     }
 
     @PostMapping(value="/boys")
